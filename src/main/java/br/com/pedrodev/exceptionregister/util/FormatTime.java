@@ -8,9 +8,9 @@ public class FormatTime {
 
 	public static String getTime(Calendar cal) {
 
-		cal.add(Calendar.DATE, 1);
+		cal.add(Calendar.DATE, 0);
 		Date date = cal.getTime();
-		SimpleDateFormat format1 = new SimpleDateFormat("HH-mm-ss");
+		SimpleDateFormat format1 = new SimpleDateFormat("HH:mm:ss");
 		String data = null;
 
 		try {

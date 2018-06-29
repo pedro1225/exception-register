@@ -1,12 +1,12 @@
 package br.com.pedrodev.exceptionregister.io;
 
-public final class ConfigLog {
+public final class LogConfig {
 
 	private String srcLOG;
 
 	/**
 	 * 
-	 * @return Caminho absoluto de onde está sendo salvo o arquivo de LOG
+	 * @return Caminho absoluto de onde estï¿½ sendo salvo o arquivo de LOG
 	 */
 	public String getSrcLOG() {
 		return srcLOG;
@@ -15,7 +15,7 @@ public final class ConfigLog {
 	/**
 	 * 
 	 * @param srcLOG
-	 *            Caminho absoluto de onde será salvo o arquivo de LOG
+	 *            Caminho absoluto de onde serï¿½ salvo o arquivo de LOG
 	 */
 	public void setSrcLOG(String srcLOG) {
 		this.srcLOG = srcLOG;

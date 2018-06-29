@@ -8,9 +8,9 @@ public class FormatDate {
 
 	public static String getDate(Calendar cal) {
 
-		cal.add(Calendar.DATE, 1);
+		cal.add(Calendar.DATE, 0);
 		Date date = cal.getTime();
-		SimpleDateFormat format1 = new SimpleDateFormat("dd-MM-yyyy");
+		SimpleDateFormat format1 = new SimpleDateFormat("dd/MM/yyyy");
 		String data = null;
 
 		try {
