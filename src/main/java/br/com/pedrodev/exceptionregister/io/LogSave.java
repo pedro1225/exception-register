@@ -20,10 +20,10 @@ public class LogSave {
 	}
 
 	/**
-	 * Salva os dados da exce√ß√£o no arquivo de LOG
+	 * Salva os dados da exceÁ„o no arquivo de LOG
 	 * 
 	 * @param exception
-	 *            Exce√ß√£o a ser salva no arquivo de LOG
+	 *            ExceÁ„o a ser salva no arquivo de LOG
 	 */
 	public void save(Exception exception) {
 
@@ -34,19 +34,24 @@ public class LogSave {
 				FileWriter fw = new FileWriter(caminho, true)) {
 
 			builder.append(FormatLog.CERQUILHA.getValor() + "\n");
-			builder.append("Data : " + FormatDate.getDate(Calendar.getInstance()) + "\n");
-			builder.append("Horario : " + FormatTime.getTime(Calendar.getInstance()) + "\n");
-			builder.append("Tipo da Exce√ß√£o : " + exception.getClass().getSimpleName() + "\n");
-			builder.append("Mensagem da Exce√ß√£o : " + exception.getMessage() + "\n");
-			builder.append("Mensagem da Exce√ß√£o Completa : ");
+			builder.append("Data : "
+					+ FormatDate.getDate(Calendar.getInstance()) + "\n");
+			builder.append("Horario : "
+					+ FormatTime.getTime(Calendar.getInstance()) + "\n");
+			builder.append("Tipo da ExceÁ„o : "
+					+ exception.getClass().getSimpleName() + "\n");
+			builder.append("Mensagem da ExceÁ„o : " + exception.getMessage()
+					+ "\n");
+			builder.append("Mensagem da ExceÁ„o Completa : ");
 			fw.write(builder.toString());
 			fw.flush();
 			exception.printStackTrace(new PrintStream(writer, true));
 			fw.write("\n");
 
-			System.out.println("Exce√ß√£o Registrada -> " + caminho);
+			System.out.println("ExceÁ„o Registrada -> " + caminho);
 		} catch (IOException erro) {
-			System.out.println("Erro ao Tentar Registrar Exce√ß√£o \n" + erro.getMessage());
+			System.out.println("Erro ao Tentar Registrar Exce√ß√£o \n"
+					+ erro.getMessage());
 		}
 	}
 

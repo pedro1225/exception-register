@@ -21,4 +21,12 @@ public final class LogConfig {
 		this.srcLOG = srcLOG;
 	}
 
+	public LogConfig(String srcLOG) {
+		setSrcLOG(srcLOG);
+	}
+
+	public LogConfig() {
+
+	}
+
 }
